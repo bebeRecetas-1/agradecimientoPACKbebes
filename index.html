@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¡Gracias por tu compra! | Cumple Sin Azúcar</title>
+<meta name="description" content="Gracias por tu compra. Acá te explicamos cómo acceder a tus recetas y materiales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#23214F;
+  --berry:#E8385B;
+  --berry-dark:#C42546;
+  --butter:#FFE7A3;
+  --mint:#CDEFE0;
+  --paper:#FBFAFF;
+  --lilac:#F0EDFB;
+  --line:#DAD5F0;
+  --muted:#5B587F;
+  --radius:22px;
+  --display:"Bricolage Grotesque","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.1rem,5vw,3.2rem);font-weight:800}
+h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800}
+h3{font-size:1.1rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:6px}
+.wrap{width:min(920px,100% - 40px);margin-inline:auto}
+section{padding:clamp(36px,6vw,64px) 0}
+.alt{background:var(--lilac)}
+.lead{font-size:1.1rem;color:var(--muted)}
+.center{text-align:center}.center p{margin-inline:auto}
+
+/* ── HEADER ÉXITO ── */
+.success-bar{
+  background:linear-gradient(90deg,#185e20 0%,#2a8233 100%);
+  color:#fff;
+  padding:18px 0;
+  text-align:center;
+}
+.success-bar .wrap{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.checkmark-lg{
+  width:30px;height:30px;background:#fff;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#185e20;font-weight:900;font-size:1rem;flex-shrink:0;
+}
+.success-bar span.msg{font-weight:700;font-size:1rem}
+
+header.brand-bar{background:rgba(251,250,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:center;height:56px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.02em}
+
+/* ── HERO ── */
+.hero{padding-top:clamp(40px,6vw,64px)}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--mint);border-radius:999px;padding:6px 16px;
+  font-size:.9rem;font-weight:700;color:#185e20;margin-bottom:16px;
+}
+
+/* ── RESUMEN DE COMPRA ── */
+.order-box{
+  background:#fff;border:2px solid var(--line);border-radius:var(--radius);
+  padding:clamp(20px,4vw,32px);margin-top:28px;
+}
+.order-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 0;border-bottom:1px solid var(--line);
+}
+.order-item:last-child{border-bottom:0}
+.order-icon{
+  flex-shrink:0;width:46px;height:46px;border-radius:14px;
+  background:var(--lilac);display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;
+}
+.order-item h3{margin-bottom:.15em}
+.order-item p{margin:0;font-size:.92rem;color:var(--muted)}
+.tag{
+  display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;
+  letter-spacing:.03em;background:var(--butter);color:#7a5b00;
+  padding:2px 9px;border-radius:999px;margin-bottom:6px;
+}
+
+/* ── PASOS PARA ACCEDER ── */
+.steps-list{margin-top:28px;display:flex;flex-direction:column;gap:18px}
+.step-row{
+  display:flex;gap:16px;background:#fff;border:2px solid var(--line);
+  border-radius:20px;padding:20px 22px;align-items:flex-start;
+}
+.step-num{
+  flex-shrink:0;width:34px;height:34px;border-radius:50%;
+  background:var(--berry);color:#fff;font-family:var(--display);font-weight:800;
+  display:flex;align-items:center;justify-content:center;font-size:.95rem;
+}
+.step-row h3{margin-bottom:.2em}
+.step-row p{margin:0;font-size:.92rem;color:var(--muted)}
+
+/* ── BOTONES ── */
+.btn{
+  display:inline-block;background:var(--berry);color:#fff;font-weight:700;
+  font-size:1.05rem;text-decoration:none;padding:15px 28px;border-radius:999px;
+  border:0;cursor:pointer;transition:background .2s,transform .2s;
+  font-family:var(--body);line-height:1.2;
+}
+.btn:hover{background:var(--berry-dark);transform:translateY(-2px)}
+
+/* ── AVISO ── */
+.notice{
+  background:var(--mint);border:1px solid #9DE8BF;border-radius:16px;
+  padding:16px 20px;margin-top:24px;font-size:.92rem;display:flex;gap:10px;align-items:flex-start;
+}
+.notice span.ico{font-size:1.1rem;flex-shrink:0}
+
+/* ── AYUDA ── */
+.help-box{
+  background:var(--ink);color:#fff;border-radius:var(--radius);
+  padding:clamp(24px,4vw,40px);text-align:center;margin-top:8px;
+}
+.help-box h2{color:#fff}
+.help-box p{color:#C9C6EE;margin-inline:auto}
+.help-box .btn{background:#fff;color:var(--ink);margin-top:10px}
+.help-box .btn:hover{background:var(--butter)}
+.help-email{
+  display:inline-block;margin-top:14px;font-family:var(--display);
+  font-weight:800;font-size:clamp(1.3rem,3.5vw,1.9rem);color:#fff;
+  text-decoration:none;letter-spacing:-.01em;word-break:break-word;
+}
+.help-email:hover{color:var(--butter)}
+
+footer{padding:30px 0 60px;font-size:.85rem;color:var(--muted)}
+footer p{max-width:72ch;margin-inline:auto;text-align:center}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .order-item{flex-direction:column}
+  .success-bar span.msg{font-size:.88rem}
+}
+</style>
+</head>
+<body>
+
+<div class="success-bar">
+  <div class="wrap">
+    <span class="checkmark-lg">✓</span>
+    <span class="msg">¡Pago confirmado! Tu compra se realizó con éxito.</span>
+  </div>
+</div>
+<header class="brand-bar">
+  <div class="wrap bar">
+    <a class="brand" href="#top">Cumple Sin Azúcar</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ══ HERO ══ -->
+<section class="hero center">
+  <div class="wrap">
+    <div class="hero-badge">🎉 ¡Gracias por confiar en nosotros!</div>
+    <h1>Ya tenés todo listo para empezar.</h1>
+    <p class="lead" style="margin-inline:auto">En unos minutos vas a recibir un correo con el acceso a todos tus materiales. Mientras tanto, te contamos exactamente qué compraste y cómo entrar.</p>
+  </div>
+</section>
+
+<!-- ══ RESUMEN DE COMPRA ══ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="center">Esto es lo que acabás de sumar</h2>
+    <div class="order-box">
+      <div class="order-item">
+        <div class="order-icon">🍼</div>
+        <div>
+          <span class="tag">Producto principal</span>
+          <h3>Pack +600 Recetas para Bebés</h3>
+          <p>Recetas sin azúcar agregada organizadas por edad y etapa, listas para incorporar a la alimentación de tu bebé desde el inicio.</p>
+        </div>
+      </div>
+      <div class="order-item">
+        <div class="order-icon">🎂</div>
+        <div>
+          <span class="tag">Upsell 1</span>
+          <h3>Pack Preparativos y Cumple Sin Azúcar</h3>
+          <p>Organización completa, ideas de menú y recetas para festejar los cumpleaños de 1, 2, 3 y 4 años sin azúcar agregada.</p>
+        </div>
+      </div>
+      <div class="order-item">
+        <div class="order-icon">🍟</div>
+        <div>
+          <span class="tag">Upsell 2</span>
+          <h3>Pack Air Fryer Sin Azúcar</h3>
+          <p>+200 recetas para Air Fryer pensadas para peques de 1 a 4 años y para toda la familia, listas en minutos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CÓMO ACCEDER ══ -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="center">Cómo acceder a tus materiales</h2>
+    <p class="lead center" style="margin-inline:auto">Todo se gestiona a través de Hotmart, nuestra plataforma de pagos. Seguí estos pasos:</p>
+
+    <div class="steps-list">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Revisá tu correo electrónico</h3>
+          <p>Hotmart te envía automáticamente un mail de confirmación con tus datos de acceso a la dirección que usaste en la compra. Puede tardar unos minutos en llegar.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Buscá en spam o promociones si no lo ves</h3>
+          <p>A veces el correo cae en la carpeta de spam, correo no deseado o promociones. Buscá un mail de "Hotmart" y marcalo como correo seguro.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Entrá a tu Área de Miembros en la app de Hotmart</h3>
+          <p>Desde ese correo vas a poder crear tu contraseña (si es tu primera compra en Hotmart) o ingresar directamente si ya tenés cuenta. Ahí vas a encontrar los tres materiales que compraste, listos para ver y descargar cuando quieras. <strong>Esto es solo por si no encontrás el acceso en tu mail.</strong></p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Guardá el acceso</h3>
+          <p>Te recomendamos guardar el link de tu Área de Miembros entre tus favoritos, así podés volver a entrar cuando quieras sin depender del mail.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="notice">
+      <span class="ico">💡</span>
+      <span>Tu acceso es de por vida: podés volver a descargar o consultar tus recetas todas las veces que necesites.</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ AYUDA ══ -->
+<section>
+  <div class="wrap">
+    <div class="help-box">
+      <h2>¿No te llegó el correo o tenés algún problema?</h2>
+      <p>Escribinos y te ayudamos a recuperar tu acceso lo antes posible.</p>
+      <a class="help-email" href="mailto:popularesrecetas@gmail.com">popularesrecetas@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Este producto ofrece ideas de recetas y organización y no reemplaza la consulta con tu pediatra. Antes de introducir alimentos nuevos, especialmente si hay antecedentes de alergias, consultá con el profesional que acompaña a tu peque.</p>
+  </div>
+</footer>
+
+</body>
+</html>
